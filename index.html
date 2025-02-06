@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <header>
+    <h1>Abdallah Khatib</h1>
+    <p>Web Developer</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+   I am a final-year Computer Science student with a strong passion for web development. With hands-on experience in building modern, responsive, and user-friendly websites, I specialize in front-end and full-stack development. My goal is to create seamless digital experiences by combining clean code, innovative design, and efficient problem-solving. Whether it's crafting dynamic web applications or optimizing user interfaces, I am always eager to push the boundaries of web technology.    </p>
+  </section>
+
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Project 1: Secret Knock Detecting lock</h3>
+      <p>
+        The Arduino Secret Knock Lock uses a piezo sensor to detect a unique knock pattern. When the knock matches the pre-set code, it triggers a servo to unlock. A fun, secure DIY project!
+      </p>
+    </div>
+    <div class="project">
+      <h3>Project 2: Portfolio Website</h3>
+      <p>
+        Designed and developed a personal portfolio website to showcase my skills and projects.
+      </p>
+    </div>
+    <div class="project">
+      <h3>Project 3: Digital logic Name display</h3>
+      <p>
+        The Digital Logic Name Display uses basic logic gates (AND, OR, NOT) to light up segments of a 7-segment display, spelling out letters or a name. By designing a circuit with specific gate combinations, each segment is controlled to form characters.
+      </p>
+    </div>
+  </section>
+
+  
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>C++</li>
+      <li>C</li>
+      <li>Responsive Design</li>
+      <li>Arduino IDE</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      If you'd like to get in touch, feel free to email me at <a href="mailto:abdallah.khatib2003@gmail.com">abdallah.khatib2003@gmail.com</a>.     
+    </p>
+    <p>
+        Or you can visit my <a href="https://www.linkedin.com/in/abdallah-khatib-8b0499349/" target="_blank" rel="Cannot open at the moment">LinkedIn</a> 
+    </p>
+    
+  </section>
+ 
+  <footer>
+    <p>&copy; 2025 Abdallah Khatib. All rights reserved.</p>
+  </footer>
+ 
+  <script>  
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  
+    const projects = document.querySelectorAll('.project');
+    projects.forEach(project => {
+      project.addEventListener('mouseover', () => {
+        project.style.transform = 'scale(1.05)';
+        project.style.transition = 'transform 0.3s ease';
+      });
+      project.addEventListener('mouseout', () => {
+        project.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+</body>
+</html>
